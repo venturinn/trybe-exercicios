@@ -4,3 +4,6 @@ O que eu vou aprender na Trybe:
 - Bash
 - Git
 
+Teste 01
+Teste 02
+Teste 03
