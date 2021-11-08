@@ -1,14 +1,7 @@
-let myName = "Diego venturin";
-let birthCity = "Concórdia";
-let birthYear = 1987;
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
 
-console.log(myName);
-console.log(birthCity);
-console.log(birthYear);
 
-birthYear = 2030;
 
-console.log(birthYear);
-
-birthCity = "Lindóia";
-console.log(birthCity);
+for (let index = 0; index < groceryList.length; index += 1) {
+    console.log(groceryList[index]);
+}
