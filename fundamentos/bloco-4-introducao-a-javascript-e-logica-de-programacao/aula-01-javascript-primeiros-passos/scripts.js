@@ -93,3 +93,56 @@ if (g > 0 && h > 0 && i > 0) {
 } else {
     console.log('Ângulos inválidos');
 }
+
+/*Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case) .
+Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
+Exemplo: bishop (bispo) -> diagonals (diagonais)*/
+
+let nomePeça = 'Rainha';
+let nomePeçaLower = nomePeça.toLowerCase();
+
+if (nomePeçaLower === 'rei') {
+    console.log('Pode mover-se em qualquer direção, porém apenas uma casa por vez');
+} else if (nomePeçaLower === 'dama' || nomePeçaLower === 'rainha') {
+    console.log('Pode mover-se em qualquer direção (vertical, horizontal e diagonal)quantas casas quiser, porém, desde que estejam livres.');
+} else if (nomePeçaLower === 'torre') {
+    console.log('Move-se em linha reta, tanto na vertical quanto na horizontal, quantas casas quiser.');
+} else if (nomePeçaLower === 'bispo') {
+    console.log('Move-se na diagonal, quantas casas quiser.');
+} else if (nomePeçaLower === 'cavalo') {
+    console.log('Movimento em ¨L¨, pode saltar sobre as outras peças');
+} else if (nomePeçaLower === 'peão') {
+    console.log('Não pode retroceder em move-se sempre uma casa para frente, exceto no primeiro movimento, quando pode mover-se duas casas.');
+} else {
+    console.log('Essa peça não existe!')
+}
+
+/*Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+Porcentagem >= 90 -> A
+Porcentagem >= 80 -> B
+Porcentagem >= 70 -> C
+Porcentagem >= 60 -> D
+Porcentagem >= 50 -> E
+Porcentagem < 50 -> F
+O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.*/
+
+let nota = 225;
+
+if (nota < 0 || nota > 100) {
+
+    console.log('Essa nota não existe!!!');
+} else if (nota >= 90) {
+    console.log('A');
+} else if (nota >= 80 && nota < 90) {
+    console.log('B');
+} else if (nota >= 70 && nota < 80) {
+    console.log('c');
+} else if (nota >= 60 && nota < 70) {
+    console.log('D');
+} else if (nota >= 50 && nota < 60) {
+    console.log('E');
+} else {
+    console.log('F');
+}
