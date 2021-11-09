@@ -63,3 +63,33 @@ if (c >= d && c > e) {
 } else {
     console.log('Todos iguais!');
 }
+
+//Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+
+const f = -2;
+
+if (f > 0) {
+    console.log('Número Positivo');
+} else if (f < 0) {
+    console.log('Número Negativo');
+} else {
+    console.log('Zero');
+}
+
+//Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+
+const g = 10;
+const h = 90;
+const i = 80;
+
+
+if (g > 0 && h > 0 && i > 0) {
+
+    if (g + h + i == 180) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+} else {
+    console.log('Ângulos inválidos');
+}
