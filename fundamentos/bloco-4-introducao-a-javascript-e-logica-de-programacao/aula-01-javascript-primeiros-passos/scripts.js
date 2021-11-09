@@ -146,3 +146,25 @@ if (nota < 0 || nota > 100) {
 } else {
     console.log('F');
 }
+
+/*Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+Bonus: use somente um if.*/
+
+const num01 = 10;
+const num02 = -20;
+const num03 = 16;
+
+if (num01 % 2 == 0 || num02 % 2 == 0 || num03 % 2 == 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+/*Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
+Bonus: use somente um if.*/
+
+if (num01 % 2 != 0 || num02 % 2 != 0 || num03 % 2 != 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
