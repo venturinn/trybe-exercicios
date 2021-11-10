@@ -1,5 +1,3 @@
-// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
@@ -87,3 +85,54 @@ for (let index = 0; index < novoArray.length; index += 1) {
     divisaoNovoArray.push(novoArray[index] / 2);
 }
 console.log(divisaoNovoArray);
+
+// Exercícios Bônus
+// Ordene o array numbers em ordem crescente e imprima seus valores;
+
+let array = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27]
+
+for (let index = 1; index < array.length; index += 1) {
+
+    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+
+        if (array[index] < array[secondIndex]) {
+            let position = array[index];
+            array[index] = array[secondIndex];
+            array[secondIndex] = position;
+        }
+    }
+}
+console.log(array);
+
+for (let index = 1; index < array.length; index += 1) {
+
+    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+
+        if (array[index] > array[secondIndex]) {
+            let position = array[index];
+            array[index] = array[secondIndex];
+            array[secondIndex] = position;
+        }
+    }
+}
+console.log(array);
+
+// Agora crie um novo array a partir do array numbers , sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro valor) e 9 (valor seguinte). Já o segundo valor do novo array deverá ser 27, pois é a multiplicação de 9 (segundo valor) e 3 (valor seguinte), e assim por diante. Caso não haja próximo valor, a multiplicação deverá ser feita por 2. Faça isso utilizando o for e o método push . O resultado deve ser o array abaixo:
+
+//let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let outroArray = [];
+
+let secondIndex = 0;
+
+for (let index = 1; index <= numbers.length; index += 1) {
+    if (index < numbers.length) {
+        for (secondIndex; secondIndex < index; secondIndex += 1) {
+            outroArray.push(numbers[secondIndex] * numbers[index]);
+        }
+    } else {
+        outroArray.push(numbers[index - 1] * 2);
+    }
+}
+
+console.log(outroArray);
