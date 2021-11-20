@@ -92,3 +92,19 @@ let clickButton = document.querySelector('#btn-holiday');
 let firstClik = true;
 
 clickButton.addEventListener('click', buttonClick);
+
+/*
+Exercício 4:
+Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+Adicione a este botão o ID "btn-friday" .
+Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+*/
+
+function createButton2(buttonName) {
+    const divButton = document.querySelector('.buttons-container');
+    const button = document.createElement('button');
+    button.innerText = buttonName;
+    button.id = "btn-friday";
+    divButton.appendChild(button);
+}
+createButton2('Sexta-feira');
