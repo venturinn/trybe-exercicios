@@ -43,14 +43,27 @@ function createDaysofMonth() {
         } else if (days === 25) {
             dayListItem.className = 'friday, day, holyday';
         }
-
         monthDaysList.appendChild(dayListItem);
     }
+}
+createDaysofMonth();
+
+/*
+Exercício 2:
+Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+Adicione a este botão a ID "btn-holiday" .
+Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+*/
 
 
+function createButton(buttonName) {
 
-
+    const divButton = document.querySelector('.buttons-container');
+    const button = document.createElement('button');
+    button.innerText = buttonName;
+    button.id = "btn-holiday";
+    divButton.appendChild(button);
 
 }
 
-createDaysofMonth();
+createButton('Feriados');
