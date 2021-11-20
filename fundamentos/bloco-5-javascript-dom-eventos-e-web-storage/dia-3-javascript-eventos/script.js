@@ -119,13 +119,13 @@ function buttonClick2() {
 
     let feriados = document.getElementsByClassName('friday');
 
-    if (firstClik === true) {
+    if (firstClik2 === true) {
         for (let i = 0; i < feriados.length; i += 1) {
             feriados[i].innerText = 'Cerveja!';
-            firstClik = false;
+            firstClik2 = false;
         }
     } else {
-        firstClik = true;
+        firstClik2 = true;
         let countDays = 4
         for (let i = 0; i < feriados.length; i += 1) {
             feriados[i].innerText = countDays;
@@ -192,12 +192,36 @@ O elemento criado deverá ser adicionado como filho/filha da tag <div> que possu
 */
 
 function colorTask(what) {
-
     const task = document.querySelector('.my-tasks');
     const newColor = document.createElement('div');
     newColor.style.backgroundColor = what;
     task.appendChild(newColor);
-
 }
 
 colorTask('pink')
+
+/*
+Exercício 9:
+Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+*/
+
+
+
+function select() {
+
+    console.log('Diego')
+
+    if (firstClik3 === true) {
+        clickButton3[4].className = 'task-selected';
+        firstClik3 = false;
+    } else {
+        clickButton3[4].className = '';
+        firstClik3 = true;
+    }
+
+}
+
+let firstClik3 = true;
+let clickButton3 = document.getElementsByTagName('div');
+clickButton3[4].addEventListener('click', select);
