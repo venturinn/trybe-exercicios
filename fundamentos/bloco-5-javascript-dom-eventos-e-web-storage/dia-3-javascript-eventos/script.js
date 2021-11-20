@@ -210,18 +210,52 @@ Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task 
 
 function select() {
 
-    console.log('Diego')
-
     if (firstClik3 === true) {
-        clickButton3[4].className = 'task-selected';
+        clickButton3[4].className = 'task selected';
         firstClik3 = false;
     } else {
         clickButton3[4].className = '';
         firstClik3 = true;
     }
-
 }
 
 let firstClik3 = true;
 let clickButton3 = document.getElementsByTagName('div');
 clickButton3[4].addEventListener('click', select);
+
+
+
+/*
+Exercício 10:
+Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+*/
+
+let numberWithColor = [];
+
+function set(number) {
+
+    let who = number.target;
+    let whoNumber = who.innerText;
+
+    let exist = numberWithColor.indexOf(whoNumber)
+
+    if (exist === -1) {
+
+        if (clickButton3[4].className === 'task selected') {
+            who.style.color = clickButton3[4].style.backgroundColor;
+            numberWithColor.push(whoNumber);
+        } else {
+            who.style.color = 'rgb(119, 119, 119)';
+        }
+    } else if (clickButton3[4].className === 'task selected') {
+        who.style.color = 'rgb(119, 119, 119)';
+        numberWithColor.splice(exist, 1);
+    }
+}
+
+let element1 = document.querySelectorAll('.day');
+
+for (let i = 0; i < element1.length; i += 1) {
+    element1[i].addEventListener('click', set);
+}
