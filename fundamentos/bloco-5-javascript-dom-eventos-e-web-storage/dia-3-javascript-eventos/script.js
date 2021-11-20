@@ -71,7 +71,7 @@ Implemente uma função que adicione ao botão "Feriados" um evento de "click" q
 É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 */
 
-function buttonClick(a) {
+function buttonClick() {
 
     let feriados = document.getElementsByClassName('holyday');
 
@@ -108,3 +108,34 @@ function createButton2(buttonName) {
     divButton.appendChild(button);
 }
 createButton2('Sexta-feira');
+
+/*
+Exercício 5:
+Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+*/
+
+function buttonClick2() {
+
+    let feriados = document.getElementsByClassName('friday');
+
+    if (firstClik === true) {
+        for (let i = 0; i < feriados.length; i += 1) {
+            feriados[i].innerText = 'Cerveja!';
+            firstClik = false;
+        }
+    } else {
+        firstClik = true;
+        let countDays = 4
+        for (let i = 0; i < feriados.length; i += 1) {
+            feriados[i].innerText = countDays;
+            countDays = countDays + 7;
+        }
+    }
+
+}
+
+let clickButton2 = document.querySelector('#btn-friday');
+let firstClik2 = true;
+
+clickButton2.addEventListener('click', buttonClick2);
