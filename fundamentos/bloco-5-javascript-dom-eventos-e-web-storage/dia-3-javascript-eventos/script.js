@@ -37,11 +37,11 @@ function createDaysofMonth() {
         dayListItem.innerHTML = days;
 
         if (days === 24 || days === 31) {
-            dayListItem.className = 'holyday, day';
+            dayListItem.className = 'holyday day';
         } else if (days === 4 || days === 11 || days === 18) {
-            dayListItem.className = 'friday, day';
+            dayListItem.className = 'friday day';
         } else if (days === 25) {
-            dayListItem.className = 'friday, day, holyday';
+            dayListItem.className = 'friday day holyday';
         }
         monthDaysList.appendChild(dayListItem);
     }
@@ -57,13 +57,38 @@ Adicione este botão como filho/filha da tag <div> com classe "buttons-container
 
 
 function createButton(buttonName) {
-
     const divButton = document.querySelector('.buttons-container');
     const button = document.createElement('button');
     button.innerText = buttonName;
     button.id = "btn-holiday";
     divButton.appendChild(button);
+}
+createButton('Feriados');
 
+/*
+Exercício 3:
+Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+*/
+
+function buttonClick(a) {
+
+    let feriados = document.getElementsByClassName('holyday');
+
+    if (firstClik === true) {
+        for (let i = 0; i < feriados.length; i += 1) {
+            feriados[i].style.backgroundColor = 'blue';
+            firstClik = false;
+        }
+    } else {
+        for (let i = 0; i < feriados.length; i += 1) {
+            feriados[i].style.backgroundColor = 'rgb(238,238,238)';
+            firstClik = true;
+        }
+    }
 }
 
-createButton('Feriados');
+let clickButton = document.querySelector('#btn-holiday');
+let firstClik = true;
+
+clickButton.addEventListener('click', buttonClick);
