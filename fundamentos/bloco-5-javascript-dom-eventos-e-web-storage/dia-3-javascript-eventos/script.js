@@ -181,7 +181,7 @@ function addTask(what) {
     task.appendChild(newTask);
 }
 
-addTask('Tomar uma cerveja');
+addTask('Correr no parque');
 
 
 /*
@@ -198,7 +198,7 @@ function colorTask(what) {
     task.appendChild(newColor);
 }
 
-colorTask('pink')
+colorTask('lightgreen')
 
 /*
 Exercício 9:
