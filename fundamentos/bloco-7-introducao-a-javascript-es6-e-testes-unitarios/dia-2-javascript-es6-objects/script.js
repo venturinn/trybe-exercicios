@@ -1,3 +1,5 @@
+// Parte I:
+
 const order = {
   name: 'Rafael Andrade',
   phoneNumber: '11-98763-1416',
@@ -67,3 +69,24 @@ console.log(`Olá ${name}, o total do seu pedido de ${pizzas[0]}, ${pizzas[1]} e
 
 orderModifier(order);
 
+// Parte II:
+
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
