@@ -70,15 +70,14 @@ function nPar(n) {
     linha4.push(" ");
   }
 
+  // Desenvolve as linhas
   for (
     let contadorLinhas = 0;
     contadorLinhas < central01;
     contadorLinhas += 1
   ) {
-    // Desenvolve as linhas
-
+    // Desenvolve os elementos de cada linha
     for (let i = n; i > 0; i -= 1) {
-      // Desenvolve os elementos de cada linha
       if (
         i === central01 ||
         i === central02 ||
@@ -106,11 +105,10 @@ function nImpar(n) {
     linha4.push(" ");
   }
 
+  // Desenvolve as linhas
   for (let contadorLinhas = 0; contadorLinhas < central; contadorLinhas += 1) {
-    // Desenvolve as linhas
-
+    // Desenvolve os elementos de cada linha
     for (let i = n; i > 0; i -= 1) {
-      // Desenvolve os elementos de cada linha
       if (
         i === central ||
         i === central - lateralCentral ||
@@ -153,9 +151,8 @@ function piramideVazia(n) {
     linha4.push(" ");
   }
 
+  // Desenvolve as linhas
   for (let contadorLinhas = 0; contadorLinhas < central; contadorLinhas += 1) {
-    // Desenvolve as linhas
-
     if (contadorLinhas === central - 1) {
       linha4 = [];
       for (let i = 0; i < n; i += 1) {
@@ -165,9 +162,8 @@ function piramideVazia(n) {
       return;
     }
 
+    // Desenvolve os elementos de cada linha
     for (let i = n; i > 0; i -= 1) {
-      // Desenvolve os elementos de cada linha
-
       if (firstLine === true && i === central) {
         linha4[i - 1] = "*";
         firstLine = false;
@@ -196,4 +192,24 @@ function desafio05(n) {
   }
 }
 
-desafio05(19);
+desafio05(11);
+
+//6- Faça um programa que diz se um número definido numa variável é primo ou não.
+
+function desafio06(n) {
+  let counter = 0;
+
+  for (let i = 1; i <= n; i += 1) {
+    if (n % i === 0) {
+      counter += 1;
+    }
+  }
+
+  if (counter === 2) {
+    console.log("O número " + n + " é primo");
+  } else {
+    console.log("O número " + n + " não é primo");
+  }
+}
+
+desafio06(997);
