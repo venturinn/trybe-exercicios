@@ -4,5 +4,6 @@
 // escreva sum abaixo
 
 const sum = (...args) => args.reduce((acc, curr) => acc + curr);
+console.log(sum(1, 4, 4, 1));
 
-console.log(sum(1, 4, 4, 1))
+
