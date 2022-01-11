@@ -31,7 +31,7 @@ describe('A função getPokemonDetails', () => {
 
         (pokemon) => pokemon.name === 'Bulbasaur', (error, message) => {
                 expect(message).toBe(retorno);
-                expect(error).toBe(null);
+                expect(error).toEqual(null);
                 done();
         })
   });
