@@ -36,9 +36,7 @@ const pokemons = [
   }
   
   // Minha solução:
-
-  getPokemonDetails((pokemon) => pokemon.name === 'Charmander', console.log);
-
+  // getPokemonDetails((pokemon) => pokemon.name === 'Charmander', console.log);
 
   // Solução do gabarito Trybe:
 
