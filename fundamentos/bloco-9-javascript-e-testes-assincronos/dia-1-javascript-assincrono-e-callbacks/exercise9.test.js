@@ -2,6 +2,7 @@
 
 
 // Verifique se a importação do arquivo correto está sendo feita.
+const { expect } = require('@jest/globals');
 const { getPokemonDetails } = require('./exercise8');
 
 
@@ -16,6 +17,7 @@ describe('A função getPokemonDetails', () => {
 
         (pokemon) => pokemon.name === 'Venturin', (error, message) => {
             expect(error).toEqual(errorReturn);
+            expect(message).toEqual(null);
             done()
         })
   });
@@ -29,6 +31,7 @@ describe('A função getPokemonDetails', () => {
 
         (pokemon) => pokemon.name === 'Bulbasaur', (error, message) => {
                 expect(message).toBe(retorno);
+                expect(error).toBe(null);
                 done();
         })
   });
