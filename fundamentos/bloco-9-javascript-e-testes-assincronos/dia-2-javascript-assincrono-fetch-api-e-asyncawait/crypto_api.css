@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(231, 227, 227);
+}
+
+h1 {
+  margin-left: 400px;
+  margin-right: 400px;
+  font-weight: 500;
+}
+
+.cryptoList {
+  padding-top: 25px;
+}
+
+div {
+  margin-left: 400px;
+  margin-right: 400px;
+}
