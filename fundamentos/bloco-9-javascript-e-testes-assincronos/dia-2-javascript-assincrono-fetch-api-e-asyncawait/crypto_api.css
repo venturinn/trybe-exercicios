@@ -3,12 +3,14 @@ body {
 }
 
 h1 {
+  text-align: center;
   margin-left: 400px;
   margin-right: 400px;
   font-weight: 500;
 }
 
 .cryptoList {
+  text-align: center;
   padding-top: 25px;
 }
 

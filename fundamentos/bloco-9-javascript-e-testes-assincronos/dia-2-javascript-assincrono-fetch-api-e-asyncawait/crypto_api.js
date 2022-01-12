@@ -15,21 +15,24 @@ Não se esqueça de estilizar a página conforme o seu estilo (tanto no CSS quan
 
 //const fetch = require("node-fetch");
 
-const cryptoList = document.getElementById('quotation');
+const cryptoList = document.getElementById("quotation");
 const cryptoArray = [];
+let brlUsd = 0;
 
-
-function creatList(){
-   const creatCryptoList = (element) =>{
-    const elementList = document.createElement('li');
-    elementList.className = 'cryptoList';
+function creatList() {
+  const creatCryptoList = (element) => {
+    const elementList = document.createElement("li");
+    elementList.className = "cryptoList";
     const price = Number(element.priceUsd);
-    elementList.innerText = `${element.name} (${element.symbol}): ${price.toFixed(2)}`;
+    elementList.innerText = `${element.name} (${
+      element.symbol
+    }): USD: ${price.toFixed(2)}, BRL: ${(brlUsd * price).toFixed(2)}`;
     cryptoList.appendChild(elementList);
+  };
 
-  }
-
-  const firstTen = cryptoArray.filter((element)=> cryptoArray.indexOf(element) < 10)
+  const firstTen = cryptoArray.filter(
+    (element) => cryptoArray.indexOf(element) < 10
+  );
   firstTen.forEach(creatCryptoList);
 }
 
@@ -48,9 +51,16 @@ const getCrypto = async () => {
       });
     });
 
-  creatList()
+  const currancyRates =
+    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
 
-  console.log(cryptoArray);
+  const result2 = await fetch(currancyRates)
+    .then((response) => response.json())
+    .then((data) => {
+      brlUsd = data.usd.brl;
+    });
+
+  creatList();
 };
 
 //getCrypto();
