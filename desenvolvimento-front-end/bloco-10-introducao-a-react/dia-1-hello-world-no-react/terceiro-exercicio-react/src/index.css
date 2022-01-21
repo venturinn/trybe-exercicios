@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.titulo{
+color:white;
+font-family: monospace;
+}
+
+.footer{
+  color:white;
+  font-family: monospace;
+}
+
+.content{
+  color:white;
+  font-family: monospace;
+}
+
+.card{
+  background-color: rgb(63, 59, 59);
 }
